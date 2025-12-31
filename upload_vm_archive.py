@@ -1,7 +1,18 @@
+import logging
 from pathlib import Path
 import subprocess
-import logging
 
+# ====================
+# Logging Configuration
+# ====================
+logging.basicConfig(
+    filename=r"C:\VM-Exports\vm_archive_upload.log",
+    level=logging.INFO,
+    format="%(asctime)s | %(levelname)s | %(message)s",
+)
+
+# ====================
+# Script starts here
 # ====================
 # Configuration
 # Values in this section are safe to change without touching logic
@@ -15,12 +26,6 @@ REMOTE = "gdrive-archive:VM-Archives"
 DRY_RUN = True # Safety switch: prevents actual upload
 
 LOG_FILE = r"C:\VM-Exports\vm_archive_upload.log"
-
-logging.basicConfig(
-    filename=LOG_FILE,
-    level=logging.INFO,
-    format="%(asctime)s | %(levelname)s | %(message)s",
-)
 
 def validate_zip_file():
     """
