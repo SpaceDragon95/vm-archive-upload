@@ -18,7 +18,7 @@ logging.basicConfig(
 # Values in this section are safe to change without touching logic
 # ====================
 RCLONE_PATH = r"C:\Tools\rclone.exe"
-ZIP_FILE = Path(r"C:\VM-Exports\hyperv-ubuntu-db-learning_2024-archive.zip")
+ZIP_FILE = Path(r"C:\VM-Exports\Ubuntu_Unicorn_Split_Zip_Files")
 REMOTE = "gdrive-archive:VM-Archives"
 DRY_RUN = True  # Safety switch: prevents actual upload
 
